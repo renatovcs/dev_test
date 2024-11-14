@@ -20,17 +20,28 @@ Dentro do arquivo `init.sql`, crie as seguintes tabelas:
 - **description** – Tipo: `Varchar(100)`, não nulo.
 - **userId** – Tipo: `Int`, não nulo (chave estrangeira referenciando a tabela `user`).
 
+### Considerações:
+* Escolhi o tipo INT UNSIGNED para que tivesse um alcanse mais amplo, chegando até um pouco mais de 4M. Se fosse necessário algo ainda maior, outra alternativa seria o BIGINT.
+
+* Para o nome das tabelas utilizei o prefixo "api_" para evitar possíveis conflitos com palavra reservada "user".
 ---
 
 ## 2º Passo: Criação das Entidades `User` e `Post`
 
 Dentro da pasta `src/Entity`, crie as entidades correspondentes às tabelas `User` e `Post`.
 
+### Considerações:
+* Ao criar as entidades, nessa primeira versão me limitei a usar o que já estava sugerido no import.
+
+* Para o nome das tabelas utilizei o prefixo "api_" para evitar possíveis conflitos com palavra reservada "user".
 ---
 
 ## 3º Passo: Configurar endpoints `users` e `posts`
 
 Dentro de `src/index.ts`, configure dois endpoints `users` & `posts`
+
+### Considerações:
+* Nessa primeira versão me concentrei em manter a simplicidade no projeto.
 
 ---
 
@@ -58,3 +69,6 @@ Execute os seguintes comandos para testar a aplicação:
 
 ## 6º Passo: Crie um fork desse repositório e submita o código preenchido nele.
 Crie um Pull Request para a brach master nos enviando o código
+
+### Considerações:
+* Na primeira versão mantive o objetivo de atender os requisitos do teste.
